@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+    <script src="./JS/swiper-bundle.min.js"></script>
+    <title>多块好省</title>
+    <!-- <script src="./JS/swiper-bundle.min.js"></script> -->
+    <script>
+        window.onload = function(){ 
+            // 监听窗口的滚动
+            window.addEventListener('scroll',function(){
+                var searchBox = document.querySelector('.search-box')
+                if(document.documentElement.scrollTop>0){
+                    searchBox.style.top = '0px';
+                }else{
+                    searchBox.style.top = '45px';
+                }
+            });
+            var swiper = new Swiper('.mySwiper', {
+            pagination: {
+                el:'.swiper-pagination',
+            },
+            autoplay:true,
+            loop: true,
+            });
+         
+        }
+    </script>
+</head>
+<body>
+    <!-- 
+        流式布局(百分比布局)
+        flex(弹性布局)
+        媒体查询+rem 适配方案
+        响应式(bootstrap)
+     -->
+     <div class="header">
+        <ul>
+            <li>
+                <img src="./images/close.png" alt="">
+            </li>
+            <li>
+                <img src="./images/logo.png" alt="">
+            </li>
+            <li>打开京东App,购物更轻松</li>
+            <li>立即打开</li>
+        </ul>
+     </div>
+     <!-- 搜索开始 -->
+     <div class="search-box clearfix">
+        <div class="left-btn">
+            <img src="./images/search-left.png" alt="">
+        </div>
+        <div class="search clearfix">
+            <div class="jd-icon"></div>
+            <div class="magnifier"></div>
+            <input type="search" name="search" placeholder="金龙鱼大米">
+        </div>
+        <div class="login">登录</div>
+     </div>
+     <!-- 搜索结束 -->
+     <!-- banner开始 -->
+     <div class="banner">
+         <div class="slider-bg"></div>
+         <div class="banner-img">
+             <!-- Swiper -->
+             <div class="swiper mySwiper">
+                 <div class="swiper-wrapper">
+                     <div class="swiper-slide">
+                         <img src="./images/banner.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide">
+                         <img src="./images/banner.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide">
+                         <img src="./images/banner.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide">
+                         <img src="./images/banner.jpg" alt="">
+                     </div>
+                     <div class="swiper-slide">
+                         <img src="./images/banner.jpg" alt="">
+                     </div>
+                 </div>
+                 <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!-- banner结束 -->
+     <!-- nav开始 -->
+     <div class="nav">
+         <div class="item">
+             <img src="./images/1.png" alt="">
+             <span>京东超市</span>
+         </div>
+         <div class="item">
+             <img src="./images/2.png" alt="">
+             <span>数码电器</span>
+         </div>
+         <div class="item">
+             <img src="./images/3.png" alt="">
+             <span>京东新百货</span>
+         </div>
+         <div class="item">
+             <img src="./images/4.png" alt="">
+             <span>京东生鲜</span>
+         </div>
+         <div class="item">
+             <img src="./images/5.png" alt="">
+             <span>京东到家</span>
+         </div>
+         <div class="item">
+             <img src="./images/6.png" alt="">
+             <span>充值缴费</span>
+         </div>
+         <div class="item">
+             <img src="./images/7.png" alt="">
+             <span>附近好店</span>
+         </div>
+         <div class="item">
+             <img src="./images/8.png" alt="">
+             <span>领券</span>
+         </div>
+         <div class="item">
+             <img src="./images/9.png" alt="">
+             <span>领金贴</span>
+         </div>
+         <div class="item">
+             <img src="./images/10.png" alt="">
+             <span>PLUS会员</span>
+         </div>
+     </div>
+     <!-- nav结束 -->
+     <!-- 京东秒杀开始 -->
+     <div class="sec-kill">
+        <div class="sec-kill-title">
+            <div class="sec-kill-title-left">
+                <div class="sec-kill-tit">京东秒杀</div>
+                <div class="sec-kill-nth">10</div>
+                <div class="sec-kill-timer"></div>
+            </div>
+            <div class="sec-kill-title-right"></div>
+        </div>
+        <div class="sec-kill-list"></div>
+     </div>
+</body>
+</html>
